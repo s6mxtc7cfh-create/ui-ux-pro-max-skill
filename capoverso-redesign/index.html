@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapoVerso ETS — Nuove voci, nuova generazione</title>
+  <meta name="description" content="CapoVerso è un'associazione giovanile APS iscritta al RUNTS: progetti culturali, civici, sociali e artistici per e con i giovani dei Nebrodi e della Sicilia.">
+  <meta name="theme-color" content="#1A3399">
+  <link rel="icon" type="image/png" href="assets/img/logo-320.png">
+  <meta property="og:title" content="CapoVerso ETS — Nuove voci, nuova generazione">
+  <meta property="og:description" content="Associazione giovanile dei Nebrodi. Progetti, partecipazione, legalità, cultura.">
+  <meta property="og:image" content="assets/img/logo-320.png">
+  <link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/rubik-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    // Tema: prima del paint, per evitare il flash. Storage può non essere disponibile.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('cv-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Salta al contenuto principale</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="CapoVerso ETS, torna all'inizio">
+        <img src="assets/img/logo-320.webp" width="44" height="45" alt="">
+        <span>Capo<b>Verso</b></span>
+      </a>
+      <nav class="nav__links" aria-label="Principale">
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#young-side">Young Side</a>
+        <a href="#storia">Storia</a>
+        <a href="#partecipa">Partecipa</a>
+        <a href="#sostienici">Sostienici</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Attiva tema scuro" aria-pressed="false">
+          <svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--sun btn--sm magnetic nav__cta" href="#partecipa">Unisciti</a>
+        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Apri il menu">
+          <svg class="i" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Menu mobile">
+      <a href="#chi-siamo"><span>01</span>Chi siamo</a>
+      <a href="#progetti"><span>02</span>Progetti</a>
+      <a href="#young-side"><span>03</span>Young Side 2026</a>
+      <a href="#storia"><span>04</span>La nostra storia</a>
+      <a href="#partecipa"><span>05</span>Partecipa</a>
+      <a href="#sostienici"><span>06</span>Sostienici</a>
+      <a href="#contatti"><span>07</span>Contatti</a>
+    </nav>
+    <a class="mobile-menu__ig" href="https://www.instagram.com/capoversocdo" target="_blank" rel="noopener">
+      <svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg> @capoversocdo
+    </a>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span><span class="blob blob--2"></span><span class="blob blob--3"></span>
+        <span class="grain"></span>
+      </div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="dot"></span> Associazione di Promozione Sociale · ETS</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="line">Nuove voci,</span>
+            <span class="line">nuova <em class="serif">generazione.</em></span>
+          </h1>
+          <p class="hero__rotator" aria-live="off">
+            Insieme facciamo
+            <span class="rotator" data-words="cultura|legalità|comunità|arte|musica|futuro">
+              <span class="rotator__word">cultura</span>
+            </span>
+            <span class="sr-only">cultura, legalità, comunità, arte, musica e futuro</span>
+          </p>
+          <p class="hero__lead">Siamo un'associazione giovanile iscritta al RUNTS. Progettiamo iniziative innovative <strong>per e con i giovani</strong> per un futuro più partecipato, nei Nebrodi e in tutta la Sicilia.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary magnetic" href="#progetti">Scopri i progetti <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost magnetic" href="#quiz">Trova il tuo posto <svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero__art">
+          <div class="stickers" aria-label="Foto dai nostri eventi">
+            <figure class="sticker sticker--a" data-r="-7">
+              <img src="assets/img/long-weekend.webp" width="900" height="448" alt="Pubblico in piazza a Capo d'Orlando durante Long Weekend">
+              <figcaption>Long Weekend</figcaption>
+            </figure>
+            <figure class="sticker sticker--b" data-r="5">
+              <img src="assets/img/librarsi.webp" width="900" height="461" alt="Ragazze e ragazzi del club del libro Librarsi in biblioteca">
+              <figcaption>Librarsi</figcaption>
+            </figure>
+            <figure class="sticker sticker--c" data-r="-3">
+              <img src="assets/img/art-day.webp" width="900" height="422" alt="Giovani tra nuvole di polveri colorate durante un evento all'aperto">
+              <figcaption>Colori &amp; comunità</figcaption>
+            </figure>
+          </div>
+          <div class="badge-ring" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="ring-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text><textPath href="#ring-path">CAPOVERSO · NUOVE VOCI · NUOVA GENERAZIONE · </textPath></text>
+            </svg>
+            <img src="assets/img/logo-320.webp" width="320" height="331" alt="">
+          </div>
+          <button class="shuffle" type="button"><svg class="i" aria-hidden="true"><use href="#i-shuffle"/></svg> Rimescola le foto</button>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#numeri" aria-label="Scorri ai numeri"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-wrap">
+    <div class="marquee" aria-label="I nostri valori in breve">
+      <div class="marquee__track">
+        <ul class="marquee__list">
+          <li>Partecipazione</li><li>Innovazione</li><li>Legalità</li><li>Nebrodi</li><li>Inclusione</li><li>Trasparenza</li><li>Cultura</li><li>Comunità</li>
+        </ul>
+        <ul class="marquee__list" aria-hidden="true">
+          <li>Partecipazione</li><li>Innovazione</li><li>Legalità</li><li>Nebrodi</li><li>Inclusione</li><li>Trasparenza</li><li>Cultura</li><li>Comunità</li>
+        </ul>
+      </div>
+      <button class="marquee__toggle" type="button" aria-pressed="false" aria-label="Metti in pausa lo scorrimento">
+        <svg class="i i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <svg class="i i-play" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
+    </div>
+    </div>
+
+    <!-- ============ NUMERI ============ -->
+    <section class="stats wrap" id="numeri" aria-label="CapoVerso in numeri">
+      <div class="stat reveal"><strong><span class="count" data-to="9">9</span>+</strong><span>progetti realizzati</span></div>
+      <div class="stat reveal"><strong><span class="count" data-to="60">60</span>+</strong><span>aziende ed enti coinvolti</span></div>
+      <div class="stat reveal"><strong><span class="count" data-to="2000">2000</span>+</strong><span>giovani coinvolti</span></div>
+      <div class="stat stat--inf reveal"><strong>∞</strong><span>energie giovanili</span></div>
+    </section>
+
+    <!-- ============ CHI SIAMO ============ -->
+    <section class="about" id="chi-siamo" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="kicker">La nostra storia</p>
+        <h2 id="about-title" class="manifesto">
+          Il nostro nome è la nostra essenza: <em class="serif">un nuovo inizio</em>, una direzione da costruire insieme, una voce che vuole farsi sentire.
+        </h2>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p><strong>CapoVerso</strong> è un'associazione giovanile no-profit nata nel <mark>2023</mark> a Capo d'Orlando dalla volontà di giovani che credono nel potere delle idee e dell'azione collettiva.</p>
+            <p>Operiamo nel territorio dei <mark>Nebrodi</mark> e in tutta la <mark>Sicilia</mark>, con iniziative in ambito culturale, sociale, civico e artistico, in rete con istituzioni, enti locali, scuole e altre realtà associative.</p>
+            <p class="about__claim">I giovani non sono il futuro: <strong>sono il presente.</strong></p>
+          </div>
+          <aside class="mission reveal">
+            <svg class="i i-xl" aria-hidden="true"><use href="#i-target"/></svg>
+            <h3>La nostra missione</h3>
+            <p>Mettere i giovani al centro dello sviluppo culturale, civico e sociale del territorio, creando spazi reali in cui le idee diventano progetti, e i progetti diventano comunità.</p>
+            <div class="runts">
+              <svg class="i" aria-hidden="true"><use href="#i-badge"/></svg>
+              <div><strong>Iscritti al RUNTS</strong><span>D.R.S. n. 1362 del 21/04/2026 — Regione Siciliana</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGETTI ============ -->
+    <section class="projects" id="progetti" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Cosa facciamo</p>
+            <h2 id="projects-title" class="h2">Dalle piazze ai teatri, <em class="serif">dalle biblioteche</em> ai palchi all'aperto.</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filtra i progetti per tema">
+            <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">Tutti</button>
+            <button type="button" class="chip" data-filter="cultura" aria-pressed="false">Cultura</button>
+            <button type="button" class="chip" data-filter="diritti" aria-pressed="false">Legalità &amp; diritti</button>
+            <button type="button" class="chip" data-filter="comunita" aria-pressed="false">Comunità</button>
+            <button type="button" class="chip" data-filter="arte" aria-pressed="false">Arte &amp; musica</button>
+          </div>
+        </div>
+        <p class="filter-status sr-only" aria-live="polite"></p>
+
+        <ul class="bento">
+          <li class="card card--feature" data-cats="comunita diritti" data-flip-id="ys">
+            <button class="card__btn" type="button" data-project="young-side" aria-haspopup="dialog">
+              <div class="card__media card__media--ys" aria-hidden="true">
+                <span class="ys-word">Young<br>Side<br><b>2026</b></span>
+              </div>
+              <div class="card__body">
+                <span class="pill pill--live"><span class="pulse"></span> In corso</span>
+                <span class="card__num">07</span>
+                <h3>Young Side 2026</h3>
+                <p class="card__cat">Leadership · Partecipazione</p>
+                <p>Il progetto più ambizioso di CapoVerso: un percorso in tre fasi per mettere i giovani al centro dello sviluppo del territorio.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="cultura comunita" data-flip-id="lw">
+            <button class="card__btn" type="button" data-project="long-weekend" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/long-weekend.webp" width="900" height="448" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">01</span>
+                <h3>Long Weekend</h3>
+                <p class="card__cat">Food &amp; Cultura</p>
+                <p>Due giorni che hanno trasformato Capo d'Orlando in un palcoscenico di eccellenze, con oltre 40 aziende e i talenti musicali dei Nebrodi.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="diritti" data-flip-id="gi">
+            <button class="card__btn" type="button" data-project="gli-immortali" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/gli-immortali.webp" width="900" height="896" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">02</span>
+                <h3>Gli Immortali</h3>
+                <p class="card__cat">Antimafia · Memoria civile</p>
+                <p>In ricordo dei Giudici Falcone e Borsellino: memoria civica che ha riempito il Teatro Rosso di San Secondo.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="comunita arte" data-flip-id="cp">
+            <button class="card__btn" type="button" data-project="color-party" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/color-party.webp" width="824" height="942" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">03</span>
+                <h3>Color Party</h3>
+                <p class="card__cat">Musica &amp; Comunità</p>
+                <p>Un'esplosione di colori, musica e gioia collettiva per famiglie e giovani.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="cultura" data-flip-id="lb">
+            <button class="card__btn" type="button" data-project="librarsi" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/librarsi.webp" width="900" height="461" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">04</span>
+                <h3>Librarsi</h3>
+                <p class="card__cat">Lettura &amp; Cultura</p>
+                <p>Un club del libro gratuito e aperto a tutti, con la Biblioteca e il Comune di Capo d'Orlando.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="diritti" data-flip-id="cv">
+            <button class="card__btn" type="button" data-project="contro-la-violenza" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/contro-la-violenza-sulle-donne.webp" width="884" height="326" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">05</span>
+                <h3>Contro la violenza sulle donne</h3>
+                <p class="card__cat">Sensibilizzazione · Diritti</p>
+                <p>Incontri e testimonianze con CESV Messina e il Centro Anti Violenza Pink Project.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card" data-cats="arte" data-flip-id="ad">
+            <button class="card__btn" type="button" data-project="art-day" aria-haspopup="dialog">
+              <div class="card__media"><img src="assets/img/art-day.webp" width="900" height="422" loading="lazy" alt=""></div>
+              <div class="card__body">
+                <span class="card__num">06</span>
+                <h3>Art Day</h3>
+                <p class="card__cat">Arte &amp; Creatività giovanile</p>
+                <p>Pittura, fotografia, performance, musica e installazioni: la creatività giovanile come espressione.</p>
+                <span class="card__more">Scopri di più <svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+              </div>
+            </button>
+          </li>
+          <li class="card card--idea" data-cats="cultura diritti comunita arte" data-flip-id="idea">
+            <a class="card__btn" href="#contatti" data-subject="Proposta di un'idea">
+              <div class="card__body">
+                <svg class="i i-xl" aria-hidden="true"><use href="#i-lightbulb"/></svg>
+                <h3>Il prossimo progetto lo scrivi tu.</h3>
+                <p>Le migliori iniziative nascono da chi vive il territorio. Raccontaci la tua idea.</p>
+                <span class="card__more">Proponi un'idea <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ YOUNG SIDE ============ -->
+    <section class="ys" id="young-side" aria-labelledby="ys-title">
+      <div class="wrap ys__grid">
+        <div class="ys__intro">
+          <span class="pill pill--live pill--onDark"><span class="pulse"></span> Progetto in corso</span>
+          <h2 id="ys-title" class="ys__title">Young Side <span class="outline">2026</span></h2>
+          <p>Un percorso strutturato in <strong>tre fasi</strong> per formare una nuova classe di giovani consapevoli, preparati e motivati a contribuire alla vita pubblica del territorio.</p>
+          <dl class="ys__facts">
+            <div><dt>Durata</dt><dd>Annuale</dd></div>
+            <div><dt>Finanziamento</dt><dd>Democrazia Partecipata Sicilia</dd></div>
+            <div><dt>Riferimento</dt><dd>L.R. 5/2014 — art. 6</dd></div>
+          </dl>
+          <a class="btn btn--sun magnetic" href="#contatti" data-subject="Candidatura Young Side 2026">Candidati o diventa partner <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <div class="phases">
+          <div class="phases__tabs" role="tablist" aria-label="Le tre fasi di Young Side 2026">
+            <button role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" tabindex="0"><span>01</span> Leadership</button>
+            <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span>02</span> Sul campo</button>
+            <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span>03</span> Impatto</button>
+          </div>
+          <div class="phases__bar" aria-hidden="true"><span></span></div>
+          <div class="phases__panels">
+            <div role="tabpanel" id="panel-1" aria-labelledby="tab-1" class="phase">
+              <svg class="i i-xl" aria-hidden="true"><use href="#i-mic"/></svg>
+              <h3>Laboratorio di Leadership</h3>
+              <p>Incontri con imprenditori, professionisti e amministratori locali. Competenze pratiche su comunicazione, gestione di un team, progettazione e public speaking.</p>
+            </div>
+            <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" class="phase" hidden>
+              <svg class="i i-xl" aria-hidden="true"><use href="#i-map-pin"/></svg>
+              <h3>Lavoro sul campo</h3>
+              <p>I partecipanti progettano e realizzano azioni concrete di cittadinanza attiva sui temi più sentiti dalla comunità: dal recupero di spazi pubblici alla sensibilizzazione su temi sociali.</p>
+            </div>
+            <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" class="phase" hidden>
+              <svg class="i i-xl" aria-hidden="true"><use href="#i-megaphone"/></svg>
+              <h3>Restituzione e impatto</h3>
+              <p>Una giornata pubblica di restituzione dei risultati, la presentazione del manifesto del gruppo e la proposta di azioni future al Comune e alle istituzioni del territorio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORIA ============ -->
+    <section class="story" id="storia" aria-labelledby="story-title">
+      <div class="story__pin">
+        <div class="wrap story__head">
+          <p class="kicker">Le tappe</p>
+          <h2 id="story-title" class="h2">Dal primo evento al <em class="serif">Terzo Settore</em>.</h2>
+        </div>
+        <div class="story__track">
+          <ol class="timeline">
+            <li class="tl reveal">
+              <span class="tl__year">2023</span>
+              <h3>La fondazione</h3>
+              <p>Un gruppo di giovani di Capo d'Orlando dà vita all'associazione. Pochi mesi dopo debutta <strong>Long Weekend</strong>, la prima grande iniziativa pubblica, con decine di aziende e migliaia di persone.</p>
+            </li>
+            <li class="tl reveal">
+              <span class="tl__year">2024</span>
+              <h3>Consolidamento</h3>
+              <p>Nascono <strong>Gli Immortali</strong> (con il Liceo Lucio Piccolo), <strong>Color Party</strong> e <strong>Art Day</strong>. CapoVerso entra stabilmente nella rete associativa del territorio.</p>
+            </li>
+            <li class="tl reveal">
+              <span class="tl__year">2025</span>
+              <h3>Cultura &amp; diritti</h3>
+              <p>Parte il club del libro <strong>Librarsi</strong> con la Biblioteca Comunale e prende forma il percorso contro la violenza sulle donne, con CESV Messina e Pink Project.</p>
+            </li>
+            <li class="tl tl--now reveal">
+              <span class="tl__year">2026</span>
+              <h3>RUNTS &amp; Young Side</h3>
+              <p>Iscrizione al <strong>Registro Unico Nazionale del Terzo Settore</strong> (D.R.S. n. 1362 del 21/04/2026) e lancio di <strong>Young Side 2026</strong>, finanziato dalla Democrazia Partecipata.</p>
+            </li>
+            <li class="tl tl--next reveal">
+              <span class="tl__year">Next</span>
+              <h3>Il prossimo capitolo</h3>
+              <p>Lo scriviamo insieme. <a href="#partecipa">Entra nella squadra →</a></p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALORI ============ -->
+    <section class="values wrap" aria-labelledby="values-title">
+      <div class="section-head section-head--center">
+        <p class="kicker">Cosa ci muove</p>
+        <h2 id="values-title" class="h2">Sei principi. <em class="serif">Zero compromessi.</em></h2>
+      </div>
+      <ul class="values__grid">
+        <li class="value reveal" style="--c: var(--sun)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-hand"/></svg>
+          <h3>Partecipazione attiva</h3>
+          <p>Il cambiamento parte dal basso, da chi vive il territorio e vuole costruirlo.</p>
+        </li>
+        <li class="value reveal" style="--c: var(--sky)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-lightbulb"/></svg>
+          <h3>Innovazione sociale</h3>
+          <p>Formati nuovi — culturali, civici, artistici — per una generazione che non si accontenta dei modelli ereditati.</p>
+        </li>
+        <li class="value reveal" style="--c: var(--coral)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-scale"/></svg>
+          <h3>Legalità &amp; impegno civico</h3>
+          <p>Memoria viva di chi si è battuto per la legalità e azioni concrete contro mafie, discriminazioni e ingiustizie.</p>
+        </li>
+        <li class="value reveal" style="--c: var(--lime)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-mountain"/></svg>
+          <h3>Radicamento territoriale</h3>
+          <p>I Nebrodi sono casa nostra. Ogni progetto nasce qui, da chi ne ha a cuore il futuro.</p>
+        </li>
+        <li class="value reveal" style="--c: var(--sky)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-users"/></svg>
+          <h3>Inclusione</h3>
+          <p>Iniziative accessibili a tutti, senza barriere economiche, culturali o sociali. La cultura è un diritto.</p>
+        </li>
+        <li class="value reveal" style="--c: var(--sun)">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-eye"/></svg>
+          <h3>Trasparenza</h3>
+          <p>Come ETS iscritto al RUNTS, bilanci e attività sono rendicontati secondo le norme del Terzo Settore.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ QUIZ ============ -->
+    <section class="quiz" id="quiz" aria-labelledby="quiz-title">
+      <div class="wrap quiz__inner">
+        <div class="quiz__head">
+          <p class="kicker kicker--onDark">30 secondi, 3 domande</p>
+          <h2 id="quiz-title" class="h2">Che tipo di <em class="serif">CapoVerso</em> sei?</h2>
+          <p>Rispondi e ti suggeriamo il modo migliore per entrare in gioco.</p>
+        </div>
+        <form class="quiz__card" novalidate>
+          <div class="quiz__progress" aria-hidden="true"><span></span></div>
+          <p class="quiz__step-label" aria-live="polite">Domanda 1 di 3</p>
+
+          <fieldset class="q" data-step="1">
+            <legend>Hai un sabato libero. Cosa fai?</legend>
+            <label class="opt"><input type="radio" name="q1" value="socio"><span>Vado alla riunione: voglio decidere cosa si fa</span></label>
+            <label class="opt"><input type="radio" name="q1" value="idea"><span>Butto giù un'idea che mi gira in testa da mesi</span></label>
+            <label class="opt"><input type="radio" name="q1" value="volontario"><span>Do una mano a montare il palco</span></label>
+            <label class="opt"><input type="radio" name="q1" value="partner"><span>Coinvolgo la mia scuola, azienda o ente</span></label>
+          </fieldset>
+          <fieldset class="q" data-step="2" hidden>
+            <legend>Il tuo superpotere?</legend>
+            <label class="opt"><input type="radio" name="q2" value="socio"><span>Costanza: ci sono sempre</span></label>
+            <label class="opt"><input type="radio" name="q2" value="idea"><span>Creatività: vedo cose che altri non vedono</span></label>
+            <label class="opt"><input type="radio" name="q2" value="volontario"><span>Mani pratiche: foto, social, allestimenti</span></label>
+            <label class="opt"><input type="radio" name="q2" value="partner"><span>Rete: conosco le persone giuste</span></label>
+          </fieldset>
+          <fieldset class="q" data-step="3" hidden>
+            <legend>Quanto tempo puoi dedicare?</legend>
+            <label class="opt"><input type="radio" name="q3" value="socio"><span>Tutto l'anno, con continuità</span></label>
+            <label class="opt"><input type="radio" name="q3" value="idea"><span>Il tempo di far partire un progetto</span></label>
+            <label class="opt"><input type="radio" name="q3" value="volontario"><span>Qualche evento quando posso</span></label>
+            <label class="opt"><input type="radio" name="q3" value="partner"><span>Il tempo di una collaborazione</span></label>
+          </fieldset>
+
+          <div class="quiz__result" hidden tabindex="-1">
+            <svg class="i i-xl quiz__icon" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            <p class="quiz__tag">Il tuo profilo</p>
+            <h3 class="quiz__name"></h3>
+            <p class="quiz__desc"></p>
+            <div class="quiz__actions">
+              <a class="btn btn--sun quiz__cta" href="#contatti">Inizia da qui <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              <button class="btn btn--ghostDark quiz__restart" type="button">Rifai il quiz</button>
+            </div>
+          </div>
+
+          <div class="quiz__nav">
+            <button class="btn btn--ghostDark quiz__back" type="button" disabled>Indietro</button>
+            <button class="btn btn--sun quiz__next" type="button" disabled>Avanti <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ PARTECIPA ============ -->
+    <section class="join wrap" id="partecipa" aria-labelledby="join-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Fai la differenza</p>
+          <h2 id="join-title" class="h2">CapoVerso è anche <em class="serif">tua.</em></h2>
+        </div>
+        <p class="section-head__lead">CapoVerso è ciò che le persone che la compongono fanno di lei. Hai idee, energia e voglia di costruire qualcosa per il tuo territorio? C'è spazio per te.</p>
+      </div>
+      <ul class="ways">
+        <li class="way reveal">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-users"/></svg>
+          <h3>Diventa socio</h3>
+          <p>Partecipa alle decisioni, ai progetti e alla vita dell'associazione. La quota annuale ci permette di operare in autonomia.</p>
+          <a href="#contatti" data-subject="Richiesta iscrizione socio">Richiedi iscrizione <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="way reveal">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-lightbulb"/></svg>
+          <h3>Proponi un'idea</h3>
+          <p>Hai un progetto o un'iniziativa per il territorio? Le cose migliori nascono da chi vive davvero i Nebrodi.</p>
+          <a href="#contatti" data-subject="Proposta di un'idea">Raccontaci la tua idea <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="way reveal">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-hand"/></svg>
+          <h3>Diventa volontario</h3>
+          <p>Non vuoi (ancora) iscriverti? C'è sempre bisogno di mani per allestire, fotografare, comunicare e raccontare.</p>
+          <a href="#contatti" data-subject="Disponibilità volontariato">Dai la tua disponibilità <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="way reveal">
+          <svg class="i i-lg" aria-hidden="true"><use href="#i-landmark"/></svg>
+          <h3>Partner istituzionale</h3>
+          <p>Comune, scuola, ETS o azienda? Apriamo tavoli di collaborazione su progetti culturali, civici e sociali.</p>
+          <a href="#contatti" data-subject="Proposta di partnership">Costruiamo insieme <svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </li>
+      </ul>
+
+      <div class="steps">
+        <h3 class="steps__title">Diventare socio in 4 passi</h3>
+        <ol class="steps__list">
+          <li class="reveal"><span>1</span><div><strong>Scrivici</strong><p>Compila il form selezionando «Richiesta iscrizione socio».</p></div></li>
+          <li class="reveal"><span>2</span><div><strong>Conosciamoci</strong><p>Ti ricontattiamo per un breve colloquio, anche in videocall.</p></div></li>
+          <li class="reveal"><span>3</span><div><strong>Modulo &amp; quota</strong><p>Compili il modulo e versi la quota associativa annuale.</p></div></li>
+          <li class="reveal"><span>4</span><div><strong>Benvenuto!</strong><p>Assemblea, gruppi di lavoro, iniziative: il tuo voto conta dal primo giorno.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ STAMPA ============ -->
+    <section class="press" aria-labelledby="press-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Rassegna stampa</p>
+            <h2 id="press-title" class="h2">Parlano <em class="serif">di noi</em></h2>
+          </div>
+        </div>
+        <ul class="press__list">
+          <li><a class="press-card reveal" href="https://98zero.com/1510578-capo-dorlando-capoverso-inaugura-un-gruppo-di-lettura-al-loc-librarsi-avra-cadenza-mensile" target="_blank" rel="noopener">
+            <span class="press-card__src">98Zero</span><span class="press-card__type">Articolo</span>
+            <h3>CapoVerso inaugura un gruppo di lettura al LOC «Librarsi»</h3>
+            <svg class="i press-card__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(si apre in una nuova scheda)</span></a></li>
+          <li><a class="press-card reveal" href="https://www.scomunicando.it/notizie/capoverso-prima-edizione-della-giornata-degli-immortali-23-maggio-cineteatro-rosso-di-san-secondo/" target="_blank" rel="noopener">
+            <span class="press-card__src">Scomunicando</span><span class="press-card__type">Articolo</span>
+            <h3>Prima edizione della Giornata degli Immortali</h3>
+            <svg class="i press-card__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(si apre in una nuova scheda)</span></a></li>
+          <li><a class="press-card reveal" href="https://www.glpress.it/capo-dorlando-alessia-giardina-nuova-presidente-di-capoverso/" target="_blank" rel="noopener">
+            <span class="press-card__src">GL Press</span><span class="press-card__type">Articolo</span>
+            <h3>Alessia Giardina nuova presidente di CapoVerso</h3>
+            <svg class="i press-card__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(si apre in una nuova scheda)</span></a></li>
+          <li><a class="press-card press-card--video reveal" href="https://youtu.be/5b-Yiw8sQvU?si=CFy070yfGfdBszOc" target="_blank" rel="noopener">
+            <span class="press-card__src">AM Notizie</span><span class="press-card__type"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg> Video</span>
+            <h3>Servizio video dedicato a CapoVerso</h3>
+            <svg class="i press-card__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(si apre in una nuova scheda)</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SOSTIENICI ============ -->
+    <section class="support" id="sostienici" aria-labelledby="support-title">
+      <div class="wrap support__grid">
+        <div class="support__copy">
+          <p class="kicker">Aiutaci a fare di più</p>
+          <h2 id="support-title" class="h2">Ogni euro diventa <em class="serif">un progetto.</em></h2>
+          <p>Anche un piccolo contributo ci permette di realizzare iniziative gratuite e accessibili a tutti, senza dipendere solo dai bandi pubblici.</p>
+          <ul class="support__alt">
+            <li><a href="#contatti" data-subject="Richiesta iscrizione socio"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg> Diventa socio</a></li>
+            <li><a href="#contatti" data-subject="Disponibilità volontariato"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> Offri il tuo tempo</a></li>
+            <li><a href="#contatti" data-subject="Proposta di partnership"><svg class="i" aria-hidden="true"><use href="#i-landmark"/></svg> Partnership aziendali</a></li>
+            <li><a href="https://www.instagram.com/capoversocdo" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg> Passaparola su Instagram</a></li>
+          </ul>
+        </div>
+        <div class="iban-card reveal">
+          <p class="iban-card__label">Donazione tramite bonifico</p>
+          <p class="iban-card__holder">Associazione CapoVerso APS</p>
+          <!-- TODO: inserire l'IBAN reale dell'associazione. Quello pubblicato sul sito attuale è un IBAN di esempio. -->
+          <p class="iban" data-iban="">IBAN in aggiornamento</p>
+          <p class="iban-card__note">Causale suggerita: «Donazione liberale CapoVerso APS»</p>
+          <button class="btn btn--sun btn--block copy-iban" type="button" disabled>
+            <svg class="i" aria-hidden="true"><use href="#i-copy"/></svg> <span>Copia IBAN</span>
+          </button>
+          <p class="iban-card__trust"><svg class="i" aria-hidden="true"><use href="#i-badge"/></svg> <span>Ente iscritto al RUNTS: ogni donazione viene rendicontata. Per la ricevuta scrivi a <a href="mailto:versocapo@gmail.com">versocapo@gmail.com</a>.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATTI ============ -->
+    <section class="contact wrap" id="contatti" aria-labelledby="contact-title">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="kicker">Parliamo</p>
+          <h2 id="contact-title" class="h2">Hai un'idea, una proposta, <em class="serif">una domanda?</em></h2>
+          <p>Ti rispondiamo personalmente, di solito entro pochi giorni lavorativi.</p>
+          <ul class="info-list">
+            <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:versocapo@gmail.com">versocapo@gmail.com</a></div></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><div><span>PEC</span><a href="mailto:capoversoets@pec.it">capoversoets@pec.it</a></div></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg><div><span>Instagram</span><a href="https://www.instagram.com/capoversocdo" target="_blank" rel="noopener">@capoversocdo</a></div></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-map-pin"/></svg><div><span>Sede legale</span>Via S.S. 113 km 109<br>98071 Capo d'Orlando (ME)</div></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-nome">Nome <span aria-hidden="true">*</span></label>
+              <input id="f-nome" name="nome" autocomplete="given-name" required aria-describedby="e-nome">
+              <p class="err" id="e-nome">Inserisci il tuo nome.</p>
+            </div>
+            <div class="field">
+              <label for="f-cognome">Cognome <span aria-hidden="true">*</span></label>
+              <input id="f-cognome" name="cognome" autocomplete="family-name" required aria-describedby="e-cognome">
+              <p class="err" id="e-cognome">Inserisci il tuo cognome.</p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email">
+            <p class="err" id="e-email">Inserisci un indirizzo email valido.</p>
+          </div>
+          <div class="field">
+            <label for="f-oggetto">Oggetto <span aria-hidden="true">*</span></label>
+            <select id="f-oggetto" name="oggetto" required aria-describedby="e-oggetto">
+              <option value="">Scegli un argomento</option>
+              <option>Richiesta iscrizione socio</option>
+              <option>Proposta di un'idea</option>
+              <option>Disponibilità volontariato</option>
+              <option>Proposta di partnership</option>
+              <option>Candidatura Young Side 2026</option>
+              <option>Informazioni sulle donazioni</option>
+              <option>Altro</option>
+            </select>
+            <p class="err" id="e-oggetto">Specifica l'oggetto del messaggio.</p>
+          </div>
+          <div class="field">
+            <label for="f-msg">Messaggio <span aria-hidden="true">*</span></label>
+            <textarea id="f-msg" name="messaggio" rows="5" required maxlength="1500" aria-describedby="e-msg c-msg"></textarea>
+            <p class="hint" id="c-msg"><span class="count-chars">0</span>/1500</p>
+            <p class="err" id="e-msg">Scrivi un messaggio.</p>
+          </div>
+          <div class="field field--captcha">
+            <label for="f-captcha">Verifica anti-spam: quanto fa <b class="cap-a">3</b> + <b class="cap-b">5</b>? <span aria-hidden="true">*</span></label>
+            <div class="captcha-row">
+              <input id="f-captcha" name="captcha" inputmode="numeric" required aria-describedby="e-captcha">
+              <button type="button" class="icon-btn icon-btn--soft cap-refresh" aria-label="Nuova domanda anti-spam"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg></button>
+            </div>
+            <p class="err" id="e-captcha">Risposta sbagliata, riprova.</p>
+          </div>
+          <div class="field field--check">
+            <label class="check">
+              <input type="checkbox" name="privacy" required aria-describedby="e-privacy">
+              <span>Ho letto la <a href="/privacy-policy">Privacy Policy</a> e acconsento al trattamento dei dati per essere ricontattato. <span aria-hidden="true">*</span></span>
+            </label>
+            <p class="err" id="e-privacy">Serve il consenso per poterti rispondere.</p>
+          </div>
+          <button class="btn btn--primary btn--block magnetic" type="submit">Invia messaggio <svg class="i" aria-hidden="true"><use href="#i-send"/></svg></button>
+          <p class="form__note">L'invio apre il tuo programma di posta con il messaggio già compilato.</p>
+          <p class="form__status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__big" aria-hidden="true">Capo<em class="serif">Verso</em></p>
+      <div class="footer__grid">
+        <div>
+          <p><strong>CapoVerso APS — ETS</strong><br>Associazione di Promozione Sociale<br>Capo d'Orlando (ME)</p>
+          <p class="footer__legal">C.F. 95033060831<br>Iscritta al RUNTS — D.R.S. n. 1362 del 21/04/2026</p>
+        </div>
+        <nav aria-label="Associazione">
+          <p class="footer__h">Associazione</p>
+          <a href="#chi-siamo">Chi siamo</a><a href="#progetti">Progetti</a><a href="#storia">Storia</a><a href="#young-side">Young Side 2026</a>
+        </nav>
+        <nav aria-label="Partecipa">
+          <p class="footer__h">Partecipa</p>
+          <a href="#partecipa">Unisciti</a><a href="#sostienici">Sostienici</a><a href="#quiz">Quiz</a><a href="#contatti">Contattaci</a>
+        </nav>
+        <div>
+          <p class="footer__h">Contatti</p>
+          <a href="mailto:versocapo@gmail.com">versocapo@gmail.com</a>
+          <a href="mailto:capoversoets@pec.it">PEC: capoversoets@pec.it</a>
+          <a href="https://www.instagram.com/capoversocdo" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span class="year">2026</span> CapoVerso APS — Tutti i diritti riservati · <a href="/privacy-policy">Privacy Policy</a> · <a href="/cookie-policy">Cookie Policy</a></p>
+        <a class="to-top" href="#top">Torna su <svg class="i" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dialog progetti -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <button class="icon-btn modal__close" type="button" aria-label="Chiudi"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <div class="modal__content"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <div class="cookie" hidden>
+    <p>Questo sito usa solo cookie e memorie tecniche necessarie al funzionamento (es. il tema scelto). <a href="/cookie-policy">Cookie Policy</a></p>
+    <button class="btn btn--sm btn--primary" type="button">Ho capito</button>
+  </div>
+
+  <!-- ============ CONTENUTI DEI PROGETTI ============ -->
+  <template id="p-young-side">
+    <p class="modal__eyebrow">Progetto 07 · <span class="pill pill--live"><span class="pulse"></span> In corso</span></p>
+    <h2 id="modal-title">Young Side 2026</h2>
+    <p class="modal__cat">Leadership · Partecipazione · Giovani · Sicilia</p>
+    <p><strong>Young Side 2026</strong> è il progetto più ambizioso di CapoVerso: un percorso in <strong>tre fasi</strong> per mettere i giovani al centro dello sviluppo del territorio.</p>
+    <p>È finanziato tramite la <strong>Democrazia Partecipata</strong> della Regione Siciliana (L.R. Sicilia n. 5/2014, art. 6), lo strumento che permette ai cittadini di destinare risorse pubbliche a iniziative scelte direttamente dalla comunità.</p>
+    <ol class="modal__list"><li><strong>Laboratorio di Leadership</strong>: comunicazione, team, progettazione, public speaking.</li><li><strong>Lavoro sul campo</strong>: azioni concrete di cittadinanza attiva.</li><li><strong>Restituzione e impatto</strong>: giornata pubblica, manifesto e proposte alle istituzioni.</li></ol>
+    <a class="btn btn--primary" href="#contatti" data-subject="Candidatura Young Side 2026">Candidati o diventa partner</a>
+  </template>
+  <template id="p-long-weekend">
+    <img class="modal__img" src="assets/img/long-weekend.webp" width="900" height="448" alt="Pubblico in piazza durante Long Weekend">
+    <p class="modal__eyebrow">Progetto 01</p>
+    <h2 id="modal-title">Long Weekend</h2>
+    <p class="modal__cat">Food · Cultura · Eccellenze · Territorio</p>
+    <p>La prima grande iniziativa di CapoVerso: una due giorni che ha trasformato Capo d'Orlando in un palcoscenico delle eccellenze dei Nebrodi, con numerose aziende locali, degustazioni, prodotti tipici e dimostrazioni dal vivo. Tra i protagonisti, il <strong>Maestro Pizzaiolo Enzo Piedimonte</strong>.</p>
+    <p>Sul palco i giovani <strong>talenti musicali dei Nebrodi</strong>, in collaborazione con il Comune di Capo d'Orlando e l'Accademia della Musica. Chiusura con la premiazione delle eccellenze in tre categorie: enogastronomia, artigianato e impresa giovanile.</p>
+    <dl class="modal__facts"><div><dt>Categorie premiate</dt><dd>3</dd></div><div><dt>Partner istituzionale</dt><dd>Comune di Capo d'Orlando</dd></div></dl>
+  </template>
+  <template id="p-gli-immortali">
+    <img class="modal__img" src="assets/img/gli-immortali.webp" width="900" height="896" alt="Incontro pubblico in teatro per Gli Immortali">
+    <p class="modal__eyebrow">Progetto 02</p>
+    <h2 id="modal-title">Gli Immortali</h2>
+    <p class="modal__cat">Legalità · Antimafia · Memoria · Scuola</p>
+    <p>Il progetto di memoria civica con cui CapoVerso ricorda i Giudici <strong>Giovanni Falcone</strong> e <strong>Paolo Borsellino</strong> e tutti coloro che hanno dato la vita per la legalità.</p>
+    <p>Ha riempito il Teatro Rosso di San Secondo e l'Aula Consiliare del Comune di Capo d'Orlando, con giornalisti, rappresentanti istituzionali, testimoni diretti e forze dell'ordine. Realizzato con il <strong>Liceo Lucio Piccolo</strong>, ha coinvolto centinaia di studenti.</p>
+    <dl class="modal__facts"><div><dt>Sedi coinvolte</dt><dd>2</dd></div><div><dt>Studenti raggiunti</dt><dd>300+</dd></div><div><dt>Partner scolastico</dt><dd>Liceo Lucio Piccolo</dd></div></dl>
+    <p class="modal__quote">Non è una commemorazione: è un'eredità da continuare.</p>
+  </template>
+  <template id="p-color-party">
+    <img class="modal__img" src="assets/img/color-party.webp" width="824" height="942" alt="Locandina del Color Party, Fluo Edition, Belvedere Monte della Madonna">
+    <p class="modal__eyebrow">Progetto 03</p>
+    <h2 id="modal-title">Color Party</h2>
+    <p class="modal__cat">Musica · Comunità · Famiglia · Giovani</p>
+    <p>Un'esplosione di colori, musica e gioia collettiva. Grande evento in collaborazione con imprenditori locali e l'Associazione <strong>The Orlandiners</strong>: famiglie e giovani riuniti in una serata all'insegna del divertimento sano e della coesione sociale.</p>
+  </template>
+  <template id="p-librarsi">
+    <img class="modal__img" src="assets/img/librarsi.webp" width="900" height="461" alt="Il gruppo di Librarsi in biblioteca">
+    <p class="modal__eyebrow">Progetto 04</p>
+    <h2 id="modal-title">Librarsi</h2>
+    <p class="modal__cat">Lettura · Biblioteca · Gratuito · Cultura</p>
+    <p>Un club del libro aperto gratuitamente a tutti, nato in collaborazione con la <strong>Biblioteca di Capo d'Orlando</strong> e il Comune. Un luogo accogliente dove i libri diventano strumenti di crescita, dialogo e immaginazione.</p>
+    <a class="btn btn--primary" href="#contatti" data-subject="Altro">Voglio partecipare</a>
+  </template>
+  <template id="p-contro-la-violenza">
+    <img class="modal__img" src="assets/img/contro-la-violenza-sulle-donne.webp" width="884" height="326" alt="Incontro pubblico contro la violenza sulle donne">
+    <p class="modal__eyebrow">Progetto 05</p>
+    <h2 id="modal-title">Contro la violenza sulle donne</h2>
+    <p class="modal__cat">Diritti · Sensibilizzazione · Donne · Comunità</p>
+    <p>In collaborazione con il <strong>CESV di Messina</strong>, il <strong>Centro Anti Violenza Pink Project</strong> e altre realtà locali: incontri e testimonianze per costruire una cultura del rispetto e della protezione.</p>
+    <p class="modal__help">Se hai bisogno di aiuto chiama il <a href="tel:1522"><strong>1522</strong></a>, numero antiviolenza e stalking, gratuito e attivo 24 ore su 24.</p>
+  </template>
+  <template id="p-art-day">
+    <img class="modal__img" src="assets/img/art-day.webp" width="900" height="422" alt="Giovani tra polveri colorate durante un evento all'aperto">
+    <p class="modal__eyebrow">Progetto 06</p>
+    <h2 id="modal-title">Art Day</h2>
+    <p class="modal__cat">Arte · Creatività · Giovani · Territorio</p>
+    <p>Una giornata dedicata all'arte in tutte le sue forme: pittura, fotografia, performance, musica e installazioni. Un evento aperto che valorizza la creatività giovanile come strumento di espressione.</p>
+  </template>
+
+  <!-- ============ ICONE (SVG sprite, tratto stile Lucide) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+      <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2l2.4 1.8 3 .1.9 2.9 2.4 1.8-.9 2.9.9 2.9-2.4 1.8-.9 2.9-3 .1L12 22l-2.4-1.8-3-.1-.9-2.9L3.3 15.4l.9-2.9-.9-2.9 2.4-1.8.9-2.9 3-.1z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+      <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></symbol>
+      <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v3a1 1 0 0 0 1 1h3l7 5V5L7 10H4a1 1 0 0 0-1 1zM18 8a5 5 0 0 1 0 8"/></symbol>
+      <symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M3 7h18M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M3 20 9.5 8l4 7 2.5-4 5 9z"/><path d="m8 11 1.5 1.5L11 11"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1M16 3.1a4 4 0 0 1 0 7.8M22 21v-1a6 6 0 0 0-4-5.7"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M5 18v-7M9.5 18v-7M14.5 18v-7M19 18v-7M12 2l9 5H3z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/SplitText.min.js" defer></script>
+  <script src="assets/vendor/Flip.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
